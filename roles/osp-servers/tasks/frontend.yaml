@@ -1,7 +1,7 @@
 ---
 - name: Create a front server instance
   os_server:
-    cloud: ospcloud
+    cloud: openstack
     name: front
     image: rhel-guest
     meta: group=frontend,deployment_name=QA
@@ -21,7 +21,7 @@
 
 - name: Add floating IP to front
   os_floating_ip:
-    cloud: ospcloud
+    cloud: openstack
     state: present
     reuse: yes
     server: front
