@@ -1,3 +1,5 @@
 ---
-
-# tasks file for osp.servers
+- include_tasks: tasks/db.yaml
+- include_tasks: tasks/app1.yaml
+- include_tasks: tasks/app2.yaml
+- include_tasks: tasks/frontend.yaml
