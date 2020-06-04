@@ -7,7 +7,6 @@
     regexp: '^Defaults\s*requiretty'
     replace: 'Defaults  !requiretty'
     backup: yes
-    ansible_ssh_private_key_file: /root/.ssh/openstack.pem
 
 - name: enable repos
   copy:
