@@ -1,6 +1,5 @@
 ---
 - name: install tomcat
-  become: true
   yum:
     name: tomcat
     state: latest
