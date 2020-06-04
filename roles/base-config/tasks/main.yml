@@ -12,7 +12,7 @@
   copy:
     src: repos_template.j2
     dest: /etc/yum.repos.d/open_three-tier-app.repo
-  mode: u=rw,g=r,o=r
+    mode: u=rw,g=r,o=r
 - name: install base tools and packages
   yum:
     name: postgresql-server
