@@ -9,6 +9,26 @@
     backup: yes
 
 - name: enable repos
- 
+  copy:
+  src: repos_template.j2
+  dest: /etc/yum.repos.d/open_three-tier-app.repo
+  mode: u=rw,g=r,o=r
 - name: install base tools and packages
+  yum:
+    name: postgresql-server
+    state: latest
+- name: enable postgres
+  service:
+    name: postgresql
+    enabled: yes
+- name: initilize postgres
+  command: postgresql-setup initdb
+  register: r_postgres_init
+  failed_when: >-
+    r_postgres_init.rc != 0 and
+    r_postgres_init.stdout != 'Data directory is not empty!'
+- name: start postgres
+  service:
+    name: postgresql.service
+    state: started
 
