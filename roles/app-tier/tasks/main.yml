@@ -1,8 +1,11 @@
 ---
 - name: install tomcat
   yum:
-    name: tomcat
+    name: "{{ item.paquete }}"
     state: latest
+  with_items:
+    - paquete: tomcat
+    - paquete: httpd
 
 - name: create ansible tomcat directory
   file:
