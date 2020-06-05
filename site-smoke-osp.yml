@@ -1,11 +1,12 @@
-- hosts: workstation
+#- hosts: workstation
+- hosts: workstation-abf0.green.osp.opentlc.com 
   gather_facts: false
   tasks:
   - name: OpenStack servers
 #    os_server_facts:
     os_server_info:
       cloud: openstack
-      server: 'frontend'
+      server: 'front'
     register: openstack_info
     tags:
       - osp.smoke
@@ -14,7 +15,7 @@
       url: "http://{{item.public_v4}}"
       return_content: yes
     with_items:
-      - "{{ openstack_info.ansible_facts.openstack_servers }}"
+      - "{{ openstack_info.openstack_servers }}"
     register: webpage
     tags:
       - osp.smoke
