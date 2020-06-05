@@ -6,7 +6,7 @@
 #    region_name: RegionOne
   register: result
 - name: Delete instances
-  os_server:
+  osp_servers:
     state: absent
     name: "{{ item.name }}"
     delete_fip: true
