@@ -8,7 +8,7 @@
 
 - name: setup load-balancer tier
 #  hosts: frontends
-  hosts: front
+  hosts: frontend
   become: yes
   roles:
     - {name: base-config, tags: base-config}
