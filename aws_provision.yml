@@ -29,7 +29,6 @@
           export username={{ param_user }}
           export password={{ param_password }}
           export uri=https://labs.opentlc.com
-          export keypairs=/root/.ssh/26f4key.pub
         dest: /root/credential.rc
         mode: 0755
 
@@ -49,3 +48,4 @@
     - name: Wait for mail
       pause:
         minutes: 10 
+
