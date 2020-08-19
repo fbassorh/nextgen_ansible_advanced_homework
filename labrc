@@ -2,9 +2,8 @@ export OSP_GUID=a3a9
 export OPENTLC_ID=fbasso-redhat.com
 export OSP_DOMAIN=green.osp.opentlc.com
 export TOWER_GUID=1234
-export OPENTLC_PASSWORD=Pixio.0104
+export OPENTLC_PASSWORD=<Your OPENTLC Password>
 export GITHUB_REPO=https://github.com/fbassorh/nextgen_ansible_advanced_homework.git
 export JQ_REPO_BASE=http://www.opentlc.com/download/ansible_bootcamp
 export REGION=us-east-1
 export MAIL_ID=fbasso@redhat.com
-
